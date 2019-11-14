@@ -1,0 +1,13 @@
+.city-card{
+    box-shadow: 8px 8px 6px #888888;
+    width: 300px;
+    height: 180px;
+    margin: 2px;
+    background-image: url('https://pixfeeds.com/uploads/images/1/4/5233816-1280_684040444-copper-painted-surface_l.jpg');
+    background-size: 100%, 100%;
+    text-align: center;
+}
+
+
+
+/* https://wallpaperaccess.com/full/241342.jpg */

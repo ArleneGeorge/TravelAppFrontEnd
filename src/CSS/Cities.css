@@ -1,0 +1,10 @@
+.city-cards{
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(4, 24%);
+    column-gap: 30px;
+    box-shadow: 2px 0 2px hsl(0, 07, 80%);
+    list-style: none;
+}
+
