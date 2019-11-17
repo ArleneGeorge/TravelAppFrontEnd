@@ -7,6 +7,7 @@ function FilterBox(props){
         <section className='search'>
         <form>
             <input type='text' 
+            className='filter-box'
             placeholder="Search by Country, City, or Region" 
             value={props.searchTerm}
             onChange={props.updateSearchTerm}

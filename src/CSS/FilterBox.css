@@ -1,0 +1,10 @@
+.filter-box{
+    width: 70rem;
+    height: 45px;
+    font-size: 20px;
+}
+
+.search{
+    padding-bottom: 2rem;
+    padding-top: -2;
+}

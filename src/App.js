@@ -1,125 +1,63 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
-import Cities from './Components/Cities'
-import CityForm from './Components/CityForm'
-import CityDetail from './Components/CityDetail'
-import FilterBox from './Components/FilterBox'
-
-import './App.css';
+import Home from './Home'
 
 
 
-class App extends Component {
+import UserSignUpForm from './Components/UserSignUpForm'
+import UserSignInForm from './Components/UserSignInForm'
+
+
+export default class App extends Component {
+
   state = {
-    cities: [],
-    isAddNewCityShowing: false,
-    newCity: [],
-    currentCity: null,
-    searchTerm: "",
-    restaurants: [],
+    toHome: false,
+    currentUser: null,
+    isSignUpShowing: false,
   }
-
-  componentDidMount(){
-    fetch('http://localhost:3000/locations')
-      .then(response => response.json())
-      .then(cities => this.setState({ cities }))
-  }
-  
-  toggleAddNewCity = () => {
-    this.setState({
-      isAddNewCityShowing: !this.state.isAddNewCityShowing
-    })
-  }
-
-  showCurrentCity = aCity => {
-    this.setState({
-      currentCity: aCity
-    })
-    
-  }
-  hideCurrentCity = () => {
-    this.setState({
-      currentCity: null
-    })
-  }
-
-  
-
-  filteredCities = () => this.state.cities
-  
-  .filter(city => city.country && city.region && city.city)
-  .filter(city => {
-    return (city.country 
-    .toLowerCase()
-    .includes(this.state.searchTerm.toLowerCase())
-    ) || (city.region 
-      .toLowerCase()
-      .includes(this.state.searchTerm.toLowerCase())
-      ) || (city.city
-        .toLowerCase()
-        .includes(this.state.searchTerm.toLowerCase())
-      )
-  })
-
-  updateSearchTerm = event => {
-    this.setState({
-      searchTerm: event.target.value,
-    })
-  }
-
+      toggleNewUserShowing = () => {
+        this.setState({
+          isSignUpShowing: !this.state.isSignUpShowing
+        })
+      }
  
 
+
   render () {
-  return (
     
-    <div className="App">
-                  
 
-   
-     
-      {
+    return (
+      <div>
+         
 
-
-
-        this.state.currentCity
-        
-        ? <CityDetail city={this.state.currentCity} hideCurrentCity={this.hideCurrentCity} />
-
-        : <div>
-        
-        
-          <button 
-          onClick={this.toggleAddNewCity}> 
-          Add New City 
-          </button>
           {
-              this.state.isAddNewCityShowing
-              ?<CityForm />
+              this.state.isSignUpShowing
+              ?<UserSignUpForm />
 
-              :null
-            }
-          
-          <FilterBox 
-          searchTerm={this.state.searchTerm}
-          updateSearchTerm={this.updateSearchTerm}
-          />
-          <Cities cities={this.filteredCities()} showCurrentCity={this.showCurrentCity} />
+              :<div><UserSignInForm />
+              <div className='new-user-button'>
+                <button 
+                    id='new-user-button'
+                    className='button'
+                    onClick={this.toggleNewUserShowing}
+                    type='submit' >Create New User
+                    
+                    </button>
+                    </div>
+                    </div>
+            
+          }
 
+          <Home />
+                      
 
-    
+  
 
-      
-        
-      
-      </div>
-      }
-
-        
-     
-    </div>
-  );
-
+          </div>
+    )
   }
 }
+          
 
-export default App;
+  

@@ -1,4 +1,4 @@
-.city-card{
+.nationalPark-card{
     box-shadow: 8px 8px 6px #504d4d;
     width: 300px;
     height: auto;
@@ -8,11 +8,17 @@
     background-color: 	rgb(248,248,255, .5);
     border-radius: 5px;
     border-style: outset;
-
+    
 }
 
+h5{
+    font-size: 25px;
+}
 
+p {
+    font-size: 18px;
+}
 
-/* https://wallpaperaccess.com/full/241342.jpg */
-
-/* background-image: url('https://pixfeeds.com/uploads/images/1/4/5233816-1280_684040444-copper-painted-surface_l.jpg'); */
+.img{
+    width: 270px;
+}

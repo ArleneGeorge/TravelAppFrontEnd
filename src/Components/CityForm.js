@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+import '../CSS/CityForm.css'
+
 class CityForm extends Component{
     state = {
         name: "",
@@ -38,9 +40,12 @@ class CityForm extends Component{
     render() {
         const {city, country, region} = this.state
         return(
-            <section className='form'>
-                <form onSubmit={this.handleSubmit}>
+            <section className='new-city-form'>
+                <form 
+                className='form'
+                onSubmit={this.handleSubmit}>
                     <input 
+                    className='input'
                     name='city'
                     type='text'
                     placeholder='City'
@@ -49,6 +54,7 @@ class CityForm extends Component{
                     />
 
                     <input 
+                    className='input'
                     name='region'
                     type='text'
                     placeholder='State/Province'
@@ -57,6 +63,7 @@ class CityForm extends Component{
                     />
 
                     <input 
+                    className='input'
                     name='country'
                     type='text'
                     placeholder='Country'
@@ -67,6 +74,7 @@ class CityForm extends Component{
                     
 
                     <input 
+                    className='button'
                     type='submit' 
                     value='Submit City' 
                     />
