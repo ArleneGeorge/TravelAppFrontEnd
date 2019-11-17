@@ -1,0 +1,9 @@
+.restaurant-cards{
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(4, 24%);
+    column-gap: 30px;
+    
+    list-style: none;
+}

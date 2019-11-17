@@ -1,0 +1,45 @@
+body {
+    display: inline;
+    text-align: center;
+     
+}
+
+.CityDetail {
+    /* background-color: rgba(224, 250, 230, 0.40);   */
+    /* background-size: 100%, 100%; */
+}
+
+h1{
+
+    text-shadow: 8px 8px 6px #504d4daf;
+}
+h3{
+    text-shadow: 8px 8px 6px #f3f0f0af;
+
+}
+
+header{
+    display: inline;
+    vertical-align: center;
+    background-color: rgba(224, 250, 230, 0.26);
+    text-shadow: 8px 8px 6px #504d4daf;
+
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    text-shadow: 8px 8px 6px #504d4daf;
+}
+
+.filter-buttons > button {
+    margin: 5px;
+    text-shadow: 8px 8px 6px #504d4daf;
+}
+
+#back-button{
+    width: 200px;
+  height: 55px;
+}
+

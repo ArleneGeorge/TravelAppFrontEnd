@@ -1,26 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from './Home'
+
+
+
+import UserSignUpForm from './Components/UserSignUpForm'
+import UserSignInForm from './Components/UserSignInForm'
+
+
+export default class App extends Component {
+
+  state = {
+    toHome: false,
+    currentUser: null,
+    isSignUpShowing: false,
+  }
+      toggleNewUserShowing = () => {
+        this.setState({
+          isSignUpShowing: !this.state.isSignUpShowing
+        })
+      }
+ 
+
+
+  render () {
+    
+
+    return (
+      <div>
+         
+
+          {
+              this.state.isSignUpShowing
+              ?<UserSignUpForm />
+
+              :<div><UserSignInForm />
+              <div className='new-user-button'>
+                <button 
+                    id='new-user-button'
+                    className='button'
+                    onClick={this.toggleNewUserShowing}
+                    type='submit' >Create New User
+                    
+                    </button>
+                    </div>
+                    </div>
+            
+          }
+
+          <Home />
+                      
+
+  
+
+          </div>
+    )
+  }
 }
+          
 
-export default App;
+  

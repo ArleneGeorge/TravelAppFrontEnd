@@ -1,22 +1,48 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap');
+
+/* https://albatross.org.nz/wp-content/uploads/ocean-background.jpg */
+/* http://getwallpapers.com/wallpaper/full/0/2/d/1156955-free-world-map-desktop-wallpaper-hd-1920x1200-download-free.jpg */
+body {
+  background-image: url("http://getwallpapers.com/wallpaper/full/0/2/d/1156955-free-world-map-desktop-wallpaper-hd-1920x1200-download-free.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+  background-attachment: fixed;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 25px;
+  color: rgb(44, 73, 127);
+  text-shadow: 1px 1px rgb(0, 166, 166)
 }
 
-.App-logo {
-  height: 40vmin;
+h4 {
+  text-shadow: 2px 2px rgb(245, 248, 248);
+  font-size: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.button {
+  background-color:  rgb(44, 73, 127);
   color: white;
+  width: 200px;
+  height: 80px;
+  border: outset;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #09d3ac;
+.add-new-button{
+  background-color:  rgb(44, 73, 127);
+  color: white;
+  width: 200px;
+  height: 80px;
+  border: outset;
+  font-size: 20px;
+  display: inline-block;
+   justify-items: center;
+
+}
+.searching {
+  
+}
+
+.new-user-button {
+  display: inline-block;
+   justify-items: center;
 }
