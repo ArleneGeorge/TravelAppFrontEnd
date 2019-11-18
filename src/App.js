@@ -31,7 +31,7 @@ export default class App extends Component {
       <div>
          
 
-          {
+          {/* {
               this.state.isSignUpShowing
               ?<UserSignUpForm />
 
@@ -47,7 +47,7 @@ export default class App extends Component {
                     </div>
                     </div>
             
-          }
+          } */}
 
           <Home />
                       

@@ -28,13 +28,13 @@ class CityDetail extends React.Component {
       }
 
       getRestauratData= ()=> {
-        fetch('http://localhost:3000/restaurants')
+        fetch('https://travel-planner-app-api.herokuapp.com/restaurants')
         .then(response => response.json())
         .then(restaurants => this.setState({ restaurants }))
       }
 
       getNationalParksData= ()=> {
-        fetch('http://localhost:3000/national_parks')
+        fetch('https://travel-planner-app-api.herokuapp.com/national_parks')
         .then(response => response.json())
         .then(nationalParks => this.setState({ nationalParks }))
       }
@@ -62,12 +62,10 @@ class CityDetail extends React.Component {
             .toLowerCase()
             .includes(this.props.city.cityName.toLowerCase())
             )
-            console.log(this.props.state.nationalParks)
     })
     
 
 render() {
-    console.log('city detail', this.props);
     return(
         
         
