@@ -17,7 +17,7 @@ class UserSignUpForm extends Component{
 
         const {first_name, last_name, email, username, password} = this.state
         const newUser = {first_name, last_name, email, username, password }
-        fetch('http://localhost:3000/users',{
+        fetch('https://travel-planner-app-api.herokuapp.com/users',{
         method: 'POST',
         headers: {
             "Content-Type": "application/json"

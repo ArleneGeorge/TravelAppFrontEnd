@@ -23,8 +23,10 @@ class Home extends Component {
     
   }
 
+  // http://localhost:3000/locations
+
   componentDidMount(){
-    fetch('http://localhost:3000/locations')
+    fetch('https://travel-planner-app-api.herokuapp.com/locations')
       .then(response => response.json())
       .then(cities => this.setState({ cities }))
   }

@@ -29,7 +29,6 @@ class UserSignInForm extends Component{
 
     }).then(response => response.json())
     .then(response => {
-        console.log(response.token)
     })
 
 
