@@ -20,10 +20,7 @@ class Home extends Component {
     currentCity: null,
     searchTerm: "",
     restaurants: [],
-    
   }
-
-  // http://localhost:3000/locations
 
   componentDidMount(){
     fetch('https://travel-planner-app-api.herokuapp.com/locations')
@@ -37,7 +34,6 @@ class Home extends Component {
     })
   }
 
-  
 
   showCurrentCity = aCity => {
     this.setState({
@@ -50,8 +46,6 @@ class Home extends Component {
       currentCity: null
     })
   }
-
-  
 
   filteredCities = () => this.state.cities
   
@@ -90,10 +84,7 @@ class Home extends Component {
         ? <CityDetail city={this.state.currentCity} hideCurrentCity={this.hideCurrentCity} />
 
         : <div>
-        
-        
-          
-          
+         
             <section className='searching'>
           <h4 >Where Would You like To Explore</h4> 
           <FilterBox 
@@ -115,7 +106,6 @@ class Home extends Component {
             :null
             }
 
-      
       </div>
       }
 
