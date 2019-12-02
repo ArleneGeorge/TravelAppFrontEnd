@@ -20,7 +20,7 @@ class CityForm extends Component{
 
         const {city, country, region} = this.state
         const newCity = {city, country, region}
-        fetch('http://localhost:3000/locations',{
+        fetch('https://travel-planner-app-api.herokuapp.com/locations',{
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
@@ -28,6 +28,7 @@ class CityForm extends Component{
         body: JSON.stringify(newCity)
 
     })
+    
     this.setState({
         newCity: {
             city: "city",

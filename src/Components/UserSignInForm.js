@@ -20,7 +20,7 @@ class UserSignInForm extends Component{
 
         const {username, password} = this.state
         const signedInUser = {username, password }
-        fetch(`http://localhost:3000/login`,{
+        fetch(`https://travel-planner-app-api.herokuapp.com/login`,{
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
@@ -36,7 +36,7 @@ class UserSignInForm extends Component{
         signedInUser: {
         
             username: 'username',
-            password: "password"
+            password: 'password'
         }
     })
     }

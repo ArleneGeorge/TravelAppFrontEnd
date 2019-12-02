@@ -4,7 +4,6 @@
 /* http://getwallpapers.com/wallpaper/full/0/2/d/1156955-free-world-map-desktop-wallpaper-hd-1920x1200-download-free.jpg */
 body {
   background-image: url("http://getwallpapers.com/wallpaper/full/0/2/d/1156955-free-world-map-desktop-wallpaper-hd-1920x1200-download-free.jpg");
-  background-repeat: no-repeat;
   background-size: 100%, 100%;
   background-attachment: fixed;
   font-family: 'Merriweather Sans', sans-serif;
@@ -38,9 +37,7 @@ h4 {
    justify-items: center;
 
 }
-.searching {
-  
-}
+
 
 .new-user-button {
   display: inline-block;
