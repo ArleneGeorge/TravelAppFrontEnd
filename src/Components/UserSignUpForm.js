@@ -9,7 +9,6 @@ class UserSignUpForm extends Component{
 
     handleChange = event => {
         const { name, value } = event.target
-
         this.setState({[name]: value })
     }
 
@@ -17,6 +16,7 @@ class UserSignUpForm extends Component{
 
         const {first_name, last_name, email, username, password} = this.state
         const newUser = {first_name, last_name, email, username, password }
+        
         fetch('https://travel-planner-app-api.herokuapp.com/users',{
         method: 'POST',
         headers: {

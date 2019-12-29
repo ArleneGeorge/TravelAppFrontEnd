@@ -11,7 +11,6 @@ class CityForm extends Component{
 
     handleChange = event => {
         const { name, value } = event.target
-
         this.setState({[name]: value })
     }
 
@@ -21,21 +20,21 @@ class CityForm extends Component{
         const {city, country, region} = this.state
         const newCity = {city, country, region}
         fetch('https://travel-planner-app-api.herokuapp.com/locations',{
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(newCity)
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newCity)
 
-    })
-    
-    this.setState({
-        newCity: {
-            city: "city",
-            region: "state/province",
-            country: 'country'
-        }
-    })
+        })
+
+        this.setState({
+            newCity: {
+                city: "city",
+                region: "state/province",
+                country: 'country'
+            }
+        })
     }
 
     render() {
@@ -45,39 +44,40 @@ class CityForm extends Component{
                 <form 
                 className='form'
                 onSubmit={this.handleSubmit}>
+
                     <input 
-                    className='input'
-                    name='city'
-                    type='text'
-                    placeholder='City'
-                    value={city}
-                    onChange={this.handleChange}
+                        className='input'
+                        name='city'
+                        type='text'
+                        placeholder='City'
+                        value={city}
+                        onChange={this.handleChange}
                     />
 
                     <input 
-                    className='input'
-                    name='region'
-                    type='text'
-                    placeholder='State/Province'
-                    value={region}
-                    onChange={this.handleChange}
+                        className='input'
+                        name='region'
+                        type='text'
+                        placeholder='State/Province'
+                        value={region}
+                        onChange={this.handleChange}
                     />
 
                     <input 
-                    className='input'
-                    name='country'
-                    type='text'
-                    placeholder='Country'
-                    value={country}
-                    onChange={this.handleChange}
+                        className='input'
+                        name='country'
+                        type='text'
+                        placeholder='Country'
+                        value={country}
+                        onChange={this.handleChange}
                     />
-                    
-                    
+
+
 
                     <input 
-                    className='button'
-                    type='submit' 
-                    value='Submit City' 
+                        className='button'
+                        type='submit' 
+                        value='Submit City' 
                     />
                 </form>
             </section>

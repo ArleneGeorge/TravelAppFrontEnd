@@ -4,14 +4,12 @@ import '../CSS/UserSignInForm.css'
 
 class UserSignInForm extends Component{
     state = {
-        name: "",
-        
+        name: "", 
     }
 
 
     handleChange = event => {
         const { name, value } = event.target
-
         this.setState({[name]: value })
     }
 
@@ -20,6 +18,7 @@ class UserSignInForm extends Component{
 
         const {username, password} = this.state
         const signedInUser = {username, password }
+
         fetch(`https://travel-planner-app-api.herokuapp.com/login`,{
         method: 'POST',
         headers: {
@@ -28,13 +27,12 @@ class UserSignInForm extends Component{
         body: JSON.stringify(signedInUser)
 
     }).then(response => response.json())
-    .then(response => {
+        .then(response => {
     })
 
 
     this.setState({
         signedInUser: {
-        
             username: 'username',
             password: 'password'
         }

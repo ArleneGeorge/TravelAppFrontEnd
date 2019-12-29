@@ -7,8 +7,8 @@ function Restaurant(props) {
         <li className='restaurant-card'>
             <h5> { props.name } </h5>
             <section className="address" >
-            <p> {props.address} </p>
-            <p> {props.city} , {props.region} </p>
+                <p> {props.address} </p>
+                <p> {props.city} , {props.region} </p>
             </section>
            
         </li>

@@ -4,6 +4,6 @@
     margin: auto;
     grid-template-columns: repeat(4, 24%);
     column-gap: 30px;
-    
+    overflow-wrap: word-wrap;
     list-style: none;
 }

@@ -11,7 +11,7 @@ function FilterBox(props){
             placeholder="Search by Country, City, or Region" 
             value={props.searchTerm}
             onChange={props.updateSearchTerm}
-          />
+            />
         </form>
       </section>
 

@@ -7,6 +7,7 @@ function Restaurants(props) {
     
     const $restaurant = props.restaurants.map(restaurant => {
         return <Restaurant 
+        key={restaurant.id} 
         name={restaurant.name}  
         place_type={restaurant.place_type}  
         address={restaurant.address}  
@@ -18,11 +19,9 @@ function Restaurants(props) {
     })
     return (
         <ul className="restaurant-cards">
-        {$restaurant}
+            {$restaurant}
         </ul>
     )
-        
-    
 }
 
 export default Restaurants
