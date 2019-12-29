@@ -6,5 +6,6 @@
     column-gap: 30px;
     box-shadow: 2px 0 2px hsl(0, 07, 80%);
     list-style: none;
+    overflow-wrap: word-wrap;
 }
 
