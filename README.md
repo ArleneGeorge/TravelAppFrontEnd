@@ -5,7 +5,7 @@ Travel Planner allows users to search over 740 Cities and to add any that are mi
 
 ## [View Deployed Web Application](https://travel-planning-app-112019.web.app/)
 
-### [Ruby on Rails API on Repo on GitHub](https://github.com/ArleneGeorge/TravelApp)
+#### [Ruby on Rails API Repo on GitHub](https://github.com/ArleneGeorge/TravelApp)
 
 ### Features 
 
