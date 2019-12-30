@@ -1,7 +1,7 @@
 # Travel Planner
 #### Designed by Arlene George with React
 
-Travel Planner allows users to search over 740 Cities and to add any that are missing. Click on a city to view local places to eat and drink. You can also see if there are any National Parks in the area. 
+Travel Planner allows users to search over 740 Cities and to add any that are missing. Click on a city to view any nearby National Parks and to find local places to eat and drink. 
 
 ## [View Deployed Web Application](https://travel-planning-app-112019.web.app/)
 
